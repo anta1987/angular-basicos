@@ -5,11 +5,18 @@ import { Component } from '@angular/core';
 //el template nos permite definir coloca lo q metamos en el , en el index
 //template:'<span>Me llamo Victor</span>'
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  selector: 'app-contador',
+  template: `
+    <h1>HOLA MUNDO</h1>
+    <h3>La base es: <strong>{{base}}</strong></h3>
+
+    <button (click)="sumar()"> +{{base}} </button>
+    <span>{{ contador }}</span>
+    <button (click)="restar()"> -{{base}} </button>
+  `
+
 })
-export class AppComponent {
+export class ContadorComponent {
   title = 'bases';
   contador : number = 10;
 
